@@ -1,5 +1,4 @@
-# empty-project
-
+# test-task
 Empty project.
 
 ## Building and running on localhost
