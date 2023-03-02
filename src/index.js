@@ -29,6 +29,9 @@ document.body.appendChild(renderer.domElement);
 // camera.position.x = 2;
 
 const controls = new OrbitControls(camera, renderer.domElement);
+// controls.enableDamping = true;
+// controls.dampingFactor = 0.05;
+// controls.maxPolarAngle = Math.PI / 2;
 
 camera.position.set(2, 2, 2);
 controls.target.set(0, 0, 0);
@@ -87,7 +90,10 @@ function createObject() {
     scene.add(object);
   }
 
-  renderer.render(scene, camera);
+  controls.addEventListener("change", () => {
+    renderer.render(scene, camera);
+  });
+  controls.update();
 }
 
 document.getElementById("btn").addEventListener("click", () => {

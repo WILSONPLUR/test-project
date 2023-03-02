@@ -15,10 +15,6 @@ a {
   color: #f00;
 }
 
-#scene-container {
-  z-index: 50;
-}
-
 .geometries-list {
   display: flex;
   flex-direction: column;
