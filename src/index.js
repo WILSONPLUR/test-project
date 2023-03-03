@@ -70,6 +70,8 @@ function createGeometry() {
       randomXPos = Math.floor(Math.random() * 6);
       randomYPos = Math.floor(Math.random() * 4);
       scene.add(mesh);
+      mesh.position.setX(randomXPos);
+      mesh.position.setY(randomYPos);
       break;
     default:
       alert("Choose geometry from select!");
